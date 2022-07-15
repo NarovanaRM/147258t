@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire d'inscription/etudiant</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="form.css">
+      <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+</head>
+
+<body>
+
+    <h2>Formulaire d'inscription:</h2>
+    <form method="POST" action="http://127.0.0.1:5000/student" enctype="multipart/form-data">
+        Genre : <br><input type="radio" name="sexe" value="Femme" required=True>Femme
+        <input type="radio" name="sexe" value="Homme">Homme<br>
+        <br> <label>Votre niveau:</label>
+        <div>
+            <input type="radio" name="classe" value="L1"  required=True>
+            <label>L1</label>
+
+            <input type="radio" name="classe" value="L2">
+            <label>L2</label>
+
+            <input type="radio" name="classe" value="L3">
+            <label>L3</label>
+        </div>
+        <br>
+        <label>Nom</label> : <input type="text" name="nom" placeholder="Votre nom"  required=True/><br>
+        <label>Prenom(s)</label> : <input type="text" name="prenom" placeholder="Votre prénom"  required=True /><br>
+        Age : <input type="number" name="age" size="2"><br> 
+        Adresse: <input type="text" name="address">
+        <br>
+        <label>E-mail</label> : <input type="email" name="email" placeholder="exemple@gmail.com"  required=True/><br>
+
+        <label>Téléphone</label> : <input type="number" name="telephone" size="10" placeholder="03********"  required=True/><br>
+       
+
+        <label>Insérez votre photo:</label><input type="file" name="photo" required=True><br>
+        <button type="submit">Envoyer</button>
+
+    </form>
+</body>
+
+</html>

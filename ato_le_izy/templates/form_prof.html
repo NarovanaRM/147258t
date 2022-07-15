@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire d'inscription/prof</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+
+    <h2>Formulaire d'inscription</h2>
+    <form method="POST" action="http://127.0.0.1:5000/prof" enctype="multipart/form-data">
+        Genre : <br><input type="radio" name="sexe" value="Femme" required=True>Femme<br>
+        <input type="radio" name="sexe" value="Homme">Homme<br>
+        <br>
+        <label>Nom</label> : <input type="text" name="nom" placeholder="Votre nom" required=True/>
+        <div><label>Prenom(s)</label> : <input type="text" name="prenom" placeholder="Votre prénom" required=True/></div>
+        Votre adresse: <input type="text" name="address"><br> Votre âge : <input type="number" name="age" size="2" required=True>
+        <br>
+        <label>E-mail</label> : <input type="email" name="email" placeholder="exemple@gmail.com" required=True/><br>
+
+        <label>Téléphone</label> : <input type="number" name="telephone" size="10" placeholder="03********" required=True/><br>
+        <label>Vous êtes professeur de:</label>
+        <div>
+            <input type="checkbox" name="module" value="MATH_110">
+            <label>MATH_110</label>
+
+            <input type="checkbox" name="module" value="MATH_120">
+            <label>MATH_120</label>
+
+            <input type="checkbox" name="module" value="MATH_210">
+            <label>MATH_210</label>
+        </div>
+        <div>
+            <input type="checkbox" name="module" value="MATH_220">
+            <label>MATH_220</label>
+
+            <input type="checkbox" name="module" value="INFO_242">
+            <label>INFO_242</label>
+
+            <input type="checkbox" name="module" value="INFO_250">
+            <label>INFO_250</label>
+        </div>
+        <div>
+            <input type="checkbox" name="module" value="INFO_253">
+            <label>INFO_253</label>
+
+            <input type="checkbox" name="module" value="INFO_262">
+            <label>INFO_262</label>
+
+            <input type="checkbox" name="module" value="INFO_264">
+            <label>INFO_264</label>
+        </div>
+        <div>
+            <input type="checkbox" name="module" value="INFO_110">
+            <label>INFO_110</label>
+
+            <input type="checkbox" name="module" value="INFO_120">
+            <label>INFO_120</label>
+
+            <input type="checkbox" name="module" value="INFO_140">
+            <label>INFO_140</label>
+        </div>
+        <div>
+            <input type="checkbox" name="module" value="INFO_150">
+            <label>INFO_150</label>
+
+            <input type="checkbox" name="module" value="INFO_160">
+            <label>INFO_160</label>
+
+            <input type="checkbox" name="module" value="INFO_163">
+            <label>INFO_163</label>
+        </div>
+        <div>
+            <input type="checkbox" name="module" value="INFO_162">
+            <label>INFO_162</label>
+
+            <input type="checkbox" name="module" value="ENTR_110">
+            <label>ENTR_110</label>
+
+            <input type="checkbox" name="module" value="ENTR_120">
+            <label>ENTR_120</label>
+        </div>
+        <div>
+            <input type="checkbox" name="module" value="ENTR_210">
+            <label>ENTR_210</label>
+
+            <input type="checkbox" name="module" value="LANG_110">
+            <label>LANG_110</label>
+
+            <input type="checkbox" name="module" value="LANG_120">
+            <label>LANG_120</label>
+        </div>
+        <br>
+
+        <label>Insérez votre photo:</label><input type="file" name="photo" required=True><br>
+        <button type="submit">Envoyer</button>
+
+    </form>
+</body>
+
+</html>

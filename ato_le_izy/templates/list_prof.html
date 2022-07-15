@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des professeurs:</title>
+</head>
+
+<body>
+
+
+    <table border="1">
+        <tr>
+            <td>Nom</td>
+            <td>Prenom</td>
+            <td>Sexe</td>
+            <td>Email</td>
+            <td>Age</td>
+            <td>Telephone</td>
+            <td>Modules</td>
+            <td>Details</td>
+        </tr>
+        {%for i in range(0, len)%}
+        <tr>
+            <td>{{profs[i].nom}}</td>
+            <td>{{profs[i].prenom}}</td>
+            <td>{{profs[i].sexe}}</td>
+            <td>{{profs[i].email}}</td>
+            <td>{{profs[i].age}}</td>
+            <td>{{profs[i].telephone}}</td>
+            <td>{{profs[i].module}}</td>
+            <td><a href="/prof/{{profs[i]._id}}/qrcode">détails</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+
+</html>

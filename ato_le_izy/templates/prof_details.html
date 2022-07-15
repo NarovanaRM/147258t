@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Details du professeur</title>
+</head>
+<body>
+<h1>Vos Informations sont ci-dessous:</h1><br>
+<br>
+<div id="container">
+    <div class="left">
+        <div class="image"><img src="{{url_for('static', filename=prof.photo)}}" alt="" width="150" height="150"></div>
+        <div class="info_left">
+            <h3>CONTACT</h3>
+            <p><b> Numéro :</b> {{prof.telephone}}</p>
+            <p><b> Email :</b> {{prof.email}}</p>
+
+            <h3>ADRESSE</h3>
+            <p></p>
+        </div>
+    </div>
+    <div class="right">
+        <div><img src="logo esti.jpg" alt=""></div>
+        <div class="name_title">
+            <h1>{{prof.nom}} {{prof.prenom}}</h1>
+        </div>
+        <div class="info_right">
+            <p>
+                    Professeur de:
+                    <ul>
+            {%for module in prof.module%}
+            <li>{{module}}</li>
+            {%endfor%}
+        </ul>
+            </p><br>
+            <p><b> Genre :</b> {{prof.sexe}}</p>
+            <p><b> Date de naissance :</b>{{prof.date_de_naissance}}</p>
+        </div>
+    </div>
+</div>
+<a href="/prof">Retour à la liste</a>
+</body>
+</html>

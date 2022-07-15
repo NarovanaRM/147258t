@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body{
+    background: linear-gradient(to right,#a8caba,#5d4157);
+    height: 100vh;
+    
+    
+}
+table td{
+    padding: 1rem;
+}
+table a{
+    text-decoration: none;
+    color:rgba(121, 179, 14, 0.973);
+    font-size: 15px;
+    transition:all .3s;
+}

@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body{
+    background: linear-gradient(to left,#a8caba,#5d4157);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+a{
+    text-decoration: none;
+    color:brown;
+    font-size: 30px;
+    transition:all .1s;
+}
+a:hover{
+    text-shadow:2px 2px 6px rgb(0,0,0)
+}
